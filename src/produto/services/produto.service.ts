@@ -52,29 +52,29 @@ export class ProdutoService {
         return buscaProduto;
     }
 
-    async create(Produto: Produto): Promise<Produto>{
-        if(Produto.categoria){
-            await this.categoriaService.findById(Produto.categoria.id)
+    async create(produto: Produto): Promise<Produto>{
+        if(produto.categoria){
+            await this.categoriaService.findById(produto.categoria.id)
 
-            return await this.produtoRepository.save(Produto);
+            return await this.produtoRepository.save(produto);
         }
-        return await this.produtoRepository.save(Produto);
+        return await this.produtoRepository.save(produto);
     }
 
-    async update(Produto: Produto): Promise<Produto>{
+    async update(produto: Produto): Promise<Produto>{
 
-        let buscaProduto = await this.findById(Produto.id);
+        let buscaProduto = await this.findById(produto.id);
 
-        if(!buscaProduto || !Produto.id)
+        if(!buscaProduto || !produto.id)
             throw new HttpException('Produto não encontrado!', HttpStatus.NOT_FOUND)
 
-        if(Produto.categoria){
-            await this.categoriaService.findById(Produto.categoria.id)
+        if(produto.categoria){
+            await this.categoriaService.findById(produto.categoria.id)
             
-            return await this.produtoRepository.save(Produto);
+            return await this.produtoRepository.save(produto);
         }
 
-        return await this.produtoRepository.save(Produto);
+        return await this.produtoRepository.save(produto);
     }
 
     async delete(id: number): Promise<DeleteResult> {
