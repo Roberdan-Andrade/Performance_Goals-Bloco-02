@@ -1,9 +1,10 @@
+-- Inserir categorias
 INSERT INTO tb_categorias (tipo) 
 VALUES 
-    ('Medicamentos'),
-    ('Suplementos'),
-    ('Higiene Pessoal'),
-    ('Cuidados com Bebês'),
-    ('Cosméticos');
+    ('Medicamentos'),         -- ID = 1
+    ('Suplementos'),          -- ID = 2
+    ('Higiene Pessoal'),      -- ID = 3
+    ('Cuidados com Bebês'),   -- ID = 4
+    ('Cosméticos');           -- ID = 5
 
 select * from tb_categorias;
