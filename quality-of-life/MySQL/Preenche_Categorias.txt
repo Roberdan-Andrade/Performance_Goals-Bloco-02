@@ -1,0 +1,9 @@
+INSERT INTO tb_categorias (tipo) 
+VALUES 
+    ('Medicamentos'),
+    ('Suplementos'),
+    ('Higiene Pessoal'),
+    ('Cuidados com Bebês'),
+    ('Cosméticos');
+
+select * from tb_categorias;

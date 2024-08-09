@@ -1,0 +1,87 @@
+USE db_farmacia;
+
+INSERT INTO tb_usuarios (nome, autoridade, foto) 
+VALUES 
+    -- Administrador
+    ('Carlos Silva', 'Administrador', '-'),
+    -- Funcionário
+    ('Ana Pereira', 'Funcionário', '-'),
+    ('João Santos', 'Funcionário', '-'),
+    -- Comum
+    ('Maria Oliveira', 'Comum', '-'),
+    ('Pedro Costa', 'Comum', '-');
+
+INSERT INTO tb_categorias (tipo) 
+VALUES 
+    ('Medicamentos'),
+    ('Suplementos'),
+    ('Higiene Pessoal'),
+    ('Cuidados com Bebês'),
+    ('Cosméticos');
+
+INSERT INTO tb_produtos (categoriaId, nome, preco, quantidade_produto, tarja, uso_pediatrico, foto, quantidade_estoque) 
+VALUES 
+    -- Medicamentos
+    (1, 'Antibiótico Amoxicilina', 12.99, '100 ml', 'Vermelha', 'Sim', '-', 100),
+    (1, 'Analgesico Dipirona', 25.50, '30 comprimidos', 'Amarela', 'Não', '-', 200),
+    (1, 'Anti-inflamatório Ibuprofeno', 8.75, '50 ml', 'Azul', 'Sim', '-', 150),
+    (1, 'Antipirético Paracetamol', 14.00, '200 ml', 'Verde', 'Sim', '-', 130),
+    (1, 'Antiácido Omeprazol', 20.00, '20 comprimidos', 'Laranja', 'Não', '-', 140),
+    (1, 'Antialérgico Loratadina', 10.00, '60 ml', 'Rosa', 'Sim', '-', 170),
+    
+    -- Cosméticos
+    (2, 'Creme Hidratante Facial Ultra Nutritivo', 45.00, '50 g', '-', '-', '-', 75),
+    (2, 'Shampoo Nutritivo e Revitalizante', 20.00, '200 ml', '-', '-', '-', 90),
+    (2, 'Loção Hidratante Corporal Intensiva', 30.50, '100 ml', '-', '-', '-', 60),
+    (2, 'Sérum Antienvelhecimento com Retinol', 50.00, '30 ml', '-', '-', '-', 50),
+    (2, 'Condicionador Hidratante Nutrição Profunda', 22.00, '300 ml', '-', '-', '-', 85),
+    (2, 'Máscara Facial Clareadora com Ácido Hialurônico', 35.00, '100 g', '-', '-', '-', 65),
+    
+    -- Suplementos
+    (3, 'Proteína Whey Isolada', 60.00, '500 g', 'Branca', 'Não', '-', 120),
+    (3, 'Multivitamínico Completo', 40.00, '60 unidades', 'Branca', 'Sim', '-', 80),
+    (3, 'Óleo de Ômega 3', 55.50, '30 cápsulas', 'Branca', 'Não', '-', 70),
+    (3, 'Creatina Monohidratada', 70.00, '1 kg', 'Branca', 'Não', '-', 95),
+    (3, 'Vitaminas A e D', 45.00, '60 unidades', 'Branca', 'Sim', '-', 85),
+    (3, 'Cápsulas de Colágeno Hidrolisado', 60.00, '30 cápsulas', 'Branca', 'Não', '-', 75),
+
+    -- Higiene
+    (4, 'Sabonete Antibacteriano com Ervas', 10.00, '90 g', '-', '-', '-', 200),
+    (4, 'Desodorante Roll-On Proteção 48h', 15.00, '100 ml', '-', '-', '-', 150),
+    (4, 'Escova de Dentes Adulto Ultra Soft', 8.00, '1 unidade', '-', '-', '-', 180),
+    (4, 'Creme Dental Fluoretado', 12.00, '90 g', '-', '-', '-', 160),
+    (4, 'Gel Antisséptico com Aloe Vera', 18.00, '200 ml', '-', '-', '-', 140),
+    (4, 'Sabonete Líquido Antimicrobiano', 7.00, '250 ml', '-', '-', '-', 190),
+    
+    -- Cuidados
+    (5, 'Pomada para Assaduras com Óleo de Calêndula', 12.00, '30 g', '-', '-', '-', 140),
+    (5, 'Fralda Descartável Tamanho M', 22.00, '1 pacote', '-', '-', '-', 110),
+    (5, 'Lenços Umedecidos Hipoalergênicos', 18.00, '1 pacote', '-', '-', '-', 160),
+    (5, 'Pomada Hidratante para Bebês', 14.00, '30 g', '-', '-', '-', 130),
+    (5, 'Fralda Descartável Tamanho G', 24.00, '1 pacote', '-', '-', '-', 120),
+    (5, 'Lenços Umedecidos com Camomila', 19.00, '1 pacote', '-', '-', '-', 150),
+    
+    -- Medicamentos adicionais
+    (1, 'Anti-helmíntico Albendazol', 16.00, '100 ml', 'Vermelha', 'Sim', '-', 140),
+    (1, 'Antipirético Dipirona', 26.00, '30 comprimidos', 'Amarela', 'Não', '-', 150),
+    (1, 'Antidiarreico Loperamida', 12.00, '50 ml', 'Azul', 'Sim', '-', 160),
+    
+    -- Cosméticos adicionais
+    (2, 'Creme Anti-Rugas com Peptídeos', 55.00, '50 g', '-', '-', '-', 70),
+    (2, 'Shampoo Fortalecedor com Biotina', 25.00, '300 ml', '-', '-', '-', 100),
+    (2, 'Loção Clareadora com Vitamina C', 35.00, '100 ml', '-', '-', '-', 85),
+    
+    -- Suplementos adicionais
+    (3, 'Pó de Creatina Micronizada', 65.00, '1 kg', 'Branca', 'Não', '-', 90),
+    (3, 'Vitaminas e Minerais em Cápsulas', 50.00, '60 unidades', 'Branca', 'Sim', '-', 80),
+    (3, 'Óleo de Peixe em Cápsulas', 60.00, '30 cápsulas', 'Branca', 'Não', '-', 70),
+    
+    -- Higiene adicionais
+    (4, 'Sabonete Líquido Hidratante com Vitaminas', 11.00, '90 g', '-', '-', '-', 180),
+    (4, 'Desodorante Antitranspirante 24h', 16.00, '100 ml', '-', '-', '-', 140),
+    (4, 'Escova de Dentes Infantil com Cerdas Macias', 9.00, '1 unidade', '-', '-', '-', 190),
+    
+    -- Cuidados adicionais
+    (5, 'Pomada Protetora para Assaduras', 13.00, '30 g', '-', '-', '-', 130),
+    (5, 'Fralda Descartável Tamanho P', 23.00, '1 pacote', '-', '-', '-', 120),
+    (5, 'Lenços Umedecidos com Extrato de Camomila', 19.00, '1 pacote', '-', '-', '-', 150);

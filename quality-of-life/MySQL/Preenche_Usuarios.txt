@@ -1,0 +1,12 @@
+INSERT INTO tb_usuarios (nome, autoridade, foto) 
+VALUES 
+    -- Administrador
+    ('Carlos Silva', 'Administrador', '-'),
+    -- Funcionário
+    ('Ana Pereira', 'Funcionário', '-'),
+    ('João Santos', 'Funcionário', '-'),
+    -- Comum
+    ('Maria Oliveira', 'Comum', '-'),
+    ('Pedro Costa', 'Comum', '-');
+
+select * from tb_usuarios;

@@ -1,0 +1,9 @@
+CREATE DATABASE db_farmacia;
+
+USE db_farmacia;
+
+DROP DATABASE db_farmacia;
+
+select * from tb_categorias;
+select * from tb_produtos;
+select * from tb_usuarios;
